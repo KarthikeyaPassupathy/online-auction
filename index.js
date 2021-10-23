@@ -16,7 +16,7 @@ mongoose.connect(
     "mongodb+srv://karthi:karthi%40mongoo@cluster0.26xez.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 );
 
-app.use(express.static(path.join(__dirname, "..", "client", "build")));
+app.use(express.static(path.join(__dirname, "client", "build")));
 app.use(express.static("public"));
 
 app.post("/api/register", async (req, res) => {
