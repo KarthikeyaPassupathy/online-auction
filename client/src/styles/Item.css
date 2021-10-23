@@ -1,0 +1,50 @@
+.Icontainer {
+  width: 100%;
+  padding: 5px;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-weight: 650;
+}
+.name,
+.desc {
+  display: inline-block;
+  width: 40%;
+}
+
+.name:hover,
+.desc:hover {
+  color: rgb(0, 172, 46);
+}
+
+.price {
+  color: rgb(0, 172, 46);
+  width: 20%;
+  text-align: right;
+  display: inline-block;
+}
+.price:hover {
+  color: black;
+}
+
+@media (max-width: 650px) {
+  .Icontainer {
+    border-radius: 0;
+  }
+
+  .name {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+  }
+  .price {
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+  }
+  .desc {
+    display: none;
+  }
+}

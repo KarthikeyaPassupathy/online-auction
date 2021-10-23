@@ -1,0 +1,32 @@
+.aip {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  border-bottom: 5px solid rgb(20, 192, 66);
+}
+
+form {
+  width: 70%;
+}
+
+.description {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  resize: none;
+}
+
+.list {
+  width: 70%;
+}
+
+.aip .submit-button {
+  border-radius: 0;
+}

@@ -1,0 +1,27 @@
+.uhp {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  border-bottom: 5px solid rgb(20, 192, 66);
+}
+
+.list {
+  width: 70%;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: black;
+}
+
+@media (max-width: 650px) {
+  .list {
+    width: 100%;
+  }
+}

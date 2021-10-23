@@ -1,0 +1,21 @@
+.Bcontainer {
+  width: 100%;
+  padding: 5px;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-weight: 650;
+}
+
+.user {
+  display: inline-block;
+  width: 50%;
+}
+.bidValue {
+  display: inline-block;
+  width: 50%;
+  color: rgb(0, 172, 46);
+  text-align: right;
+}
