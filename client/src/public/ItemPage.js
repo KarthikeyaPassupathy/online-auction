@@ -34,7 +34,7 @@ function ItemPage(props) {
 
   //Getting item information and the enlisted bidders from server
   async function getItem() {
-    const response = await fetch("http://localhost:1337/api/getItemDetail", {
+    const response = await fetch("/api/getItemDetail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function ItemPage(props) {
     } else {
       console.log(BidValue, HeighestBid);
       if (BidValue > HeighestBid) {
-        const response = await fetch("http://localhost:1337/api/updateBid", {
+        const response = await fetch("/api/updateBid", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -88,7 +88,7 @@ function ItemPage(props) {
   }, [BidValue]);
 
   async function getWinner() {
-    const response = await fetch("http://localhost:1337/api/getWinner", {
+    const response = await fetch("/api/getWinner", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

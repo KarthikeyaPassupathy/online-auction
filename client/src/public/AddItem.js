@@ -18,7 +18,7 @@ function AddItem() {
 
   async function getItems() {
     console.log("Get items called");
-    const response = await fetch("http://localhost:1337/api/getItems");
+    const response = await fetch("/api/getItems");
     const data = await response.json();
     if (data.status === "ok") {
       setItems(data.items);
@@ -45,7 +45,7 @@ function AddItem() {
       startTime.setMinutes(startTime.getMinutes() - 330);
       endTime.setMinutes(endTime.getMinutes() - 330);
       console.log(startTime, endTime);
-      const response = await fetch("http://localhost:1337/api/addItem", {
+      const response = await fetch("/api/addItem", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

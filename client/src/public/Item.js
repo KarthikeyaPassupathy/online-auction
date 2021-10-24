@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Item(props) {
   async function setBidder() {
-    const response = await fetch("http://localhost:1337/api/setBidder", {
+    const response = await fetch("/api/setBidder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
