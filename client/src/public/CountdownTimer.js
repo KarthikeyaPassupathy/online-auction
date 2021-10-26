@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 
 function CountdownTimer(props) {
+  const [startingTime, setstartingTime] = useState(Date.parse(props.startT));
+  const [endingTime, setendingTime] = useState(Date.parse(props.endT));
   const [Total, setTotal] = useState();
   const [Seconds, setSeconds] = useState();
   const [Minutes, setMinutes] = useState();
   const [Hours, setHours] = useState();
 
   function getTimeRemaining() {
-    console.log(Date.parse(props.startT), Date.parse(props.endT));
-    if (Date.parse(props.startT) > Date.parse(new Date())) {
-      setTotal(Date.parse(props.endT) - Date.parse(props.startT));
+    console.log(startingTime, endingTime);
+    if (startingTime > Date.parse(new Date())) {
+      setTotal(endingTime - startingTime);
     } else {
-      setTotal(Date.parse(props.endT) - Date.parse(new Date()));
+      setTotal(endingTime - Date.parse(new Date()));
     }
   }
 
