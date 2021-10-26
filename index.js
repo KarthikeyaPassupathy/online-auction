@@ -77,7 +77,7 @@ app.post("/api/addItem", async (req, res) => {
     res.json({ status: "ok", item });
   } catch (err) {
     console.log(err);
-    res.json({ status: "error" });
+    res.json({ status: "error", err });
   }
 });
 
