@@ -122,7 +122,7 @@ function ItemPage(props) {
         {endT.toString().replace("GMT+0530 (India Standard Time)", "")}
       </span>
       <br />
-      {winner ? winner : ""}
+      <div className="winner">{winner ? winner : ""}</div>
       <Countdown startT={startT} endT={endT} getWinner={getWinner} />
       <button className="bid-button" onClick={togglePopUp}>
         BID
