@@ -57,6 +57,9 @@ function App() {
           <br />
           <input className="submit-button" type="submit" value="Login" />
         </form>
+        <p>
+          Not a user? <a href="/register">Register here</a>
+        </p>
       </div>
     </div>
   );

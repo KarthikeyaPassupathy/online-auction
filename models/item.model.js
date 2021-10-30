@@ -9,7 +9,9 @@ const Item = new mongoose.Schema(
     endTime: { type: String, required: true },
     bidders: [
       {
-        user: { type: String },
+        user: {
+          type: String,
+        },
         bidValue: { type: Number },
       },
     ],

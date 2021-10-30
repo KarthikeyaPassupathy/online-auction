@@ -12,6 +12,7 @@ function ItemPage(props) {
   const [startT, setstartT] = useState(" ");
   const [endT, setendT] = useState(" ");
   const [initialRender, setinitialRender] = useState(true);
+  const [winner, setwinner] = useState();
 
   function togglePopUp() {
     if (
@@ -81,6 +82,8 @@ function ItemPage(props) {
           }),
         });
         console.log(response.json());
+        // history.push("/")
+        window.location.reload(false);
       } else {
         alert("Invalid Bid, needs to heigher than the highest bid");
       }
@@ -99,7 +102,7 @@ function ItemPage(props) {
       }),
     });
     const data = await response.json();
-    console.log(data);
+    setwinner(data);
   }
 
   return (
@@ -119,11 +122,13 @@ function ItemPage(props) {
         {endT.toString().replace("GMT+0530 (India Standard Time)", "")}
       </span>
       <br />
+      {winner ? winner : ""}
       <Countdown startT={startT} endT={endT} getWinner={getWinner} />
       <button className="bid-button" onClick={togglePopUp}>
         BID
       </button>
       <br />
+
       <div className="bidders-list">
         {Bidders.map((bidder) => {
           return (

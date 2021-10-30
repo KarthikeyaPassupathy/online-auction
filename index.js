@@ -100,6 +100,7 @@ app.post("/api/getItemDetail", async (req, res) => {
 
 app.post("/api/setBidder", async (req, res) => {
   const decoded = jwt.verify(req.headers["x-access-token"], "secret123");
+  console.log(decoded);
   const email = decoded.email;
   const item = await Item.findOne({
     _id: req.body.id,
