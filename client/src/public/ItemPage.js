@@ -102,7 +102,7 @@ function ItemPage(props) {
       }),
     });
     const data = await response.json();
-    setwinner(data);
+    setwinner(data.status);
   }
 
   return (
