@@ -5,6 +5,8 @@ import Register from "./public/Register";
 import AddItem from "./public/AddItem";
 import UserHomePage from "./public/userHomePage";
 import ItemPage from "./public/ItemPage";
+import PrivateRoute from "./public/PrivateRoute";
+import IsLoggedinRoute from "./public/IsLoggedinRoute";
 
 export default function App() {
   return (
@@ -12,9 +14,9 @@ export default function App() {
       <BrowserRouter>
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
-        <Route path="/additem" exact component={AddItem} />
-        <Route path="/userhomepage" exact component={UserHomePage} />
-        <Route path="/ItemPage/:id" exact component={ItemPage} />
+        <PrivateRoute path="/additem" exact component={AddItem} />
+        <IsLoggedinRoute path="/userhomepage" exact component={UserHomePage} />
+        <IsLoggedinRoute path="/ItemPage/:id" exact component={ItemPage} />
       </BrowserRouter>
     </div>
   );
