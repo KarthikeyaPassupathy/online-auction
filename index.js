@@ -12,8 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb+srv://karthi:karthi%40mongoo@cluster0.26xez.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  process.env.MONGODB_URI
 );
 
 app.use(express.static(path.join(__dirname, "client", "build")));
